@@ -1,15 +1,12 @@
 class Solution {
     public boolean divideArray(int[] nums) {
-        int freq[]=new int[501];
-        for(int i=0;i<nums.length;i++){
-            freq[nums[i]]++;
-        }
-        for(int fre:freq){
-            if(fre%2!=0){
-                return false;
-            }
+        int temp[] = new int[1000];
+        for(int i : nums) temp[i]++;
+        for(int i=0; i<temp.length; i++){
+        if(temp[i]%2!=0){
+             return false;
+           }
         }
         return true;
-        
     }
 }
