@@ -1,16 +1,14 @@
 class Solution {
     public String reverseWords(String s) {
-        //trim spaces and split words
-        String words[] = s.trim().split("\\s+");
-
-        StringBuilder ans = new StringBuilder();
-        for(int i=words.length-1;i>=0;i--){
-            ans.append(words[i]);
+        String arr[]=s.trim().split("\\s+");
+        StringBuilder sb = new StringBuilder();
+        for(int i=arr.length-1;i>=0;i--){
+            sb.append(arr[i]);
             if(i>0){
-                ans.append(" ");
+                sb.append(" ");
             }
         }
-        return ans.toString();
+        return sb.toString();
         
     }
 }
