@@ -1,16 +1,16 @@
 class Solution {
     public double myPow(double x, int n) {
+        long N = Math.abs((long)n);
         double ans=1;
-        long ex=Math.abs((long)n);
-        while (ex > 0) {
-            if (ex % 2 == 1) {
-                ans *= x;
+        while(N>0){
+            if(N%2==1){
+                ans*=x;
             }
-            x *= x;
-            ex /= 2;
+            x*=x;
+            N/=2;
         }
         if(n<0){
-            ans=1/ans;
+            return 1/ans;
         }
         return ans;
         
