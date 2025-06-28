@@ -19,9 +19,9 @@ class Solution {
         return iS(root.left,root.right);
         
     }
-    private boolean iS(TreeNode t1,TreeNode t2){
-        if(t1==null&&t2==null)return true;
-        if(t1==null||t2==null)return false;
-        return (t1.val==t2.val) &&  iS(t1.left,t2.right) && iS(t1.right,t2.left);
+    private boolean iS(TreeNode left, TreeNode right){
+        if(left==null&&right==null)return true;
+        if(left==null||right==null)return false;
+        return (left.val==right.val && iS(left.left,right.right)&&iS(left.right,right.left));
     }
 }
